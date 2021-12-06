@@ -1,8 +1,8 @@
 # Ad Conversions via Oblivious Shuffling
 
 ## Sample Input Dataset
-The data folder contains 2 input datasets for the bucketization protocol. Each of them contains 1,000,000 attribution keys for the histogram aggregation.
-The data is drawn from Zipf distribution with the parameter 1.03 and domain size (support) 1,048,576. The size of the keys are 32-bit and 128-bit
+The data folder contains 2 input datasets for the bucketization protocol. Each of them contains 1000000 attribution keys for the histogram aggregation.
+The data is drawn from Zipf distribution with the parameter 1.03 and domain size (support) 1048576. The size of the keys are 32-bit and 128-bit
 respectively.
 
 ## Benchmarks
@@ -17,8 +17,8 @@ at the us-west region and one of them is located at us-east region. The round-tr
 
 | key size (bits) | #keys | domain size | threshold | running time (seconds) |
 | --------------- | ----- | ----------- | --------- | ---------------------- |
-| 32  | 1,000,000 | 1,048,576 | 200 | 9.89   |
-| 128 | 1,000,000 | 1,048,476 | 500 | 352.14 |
+| 32  | 1000000 | 1048576 | 200 | 9.89   |
+| 128 | 1000000 | 1048476 | 500 | 352.14 |
 
 ## References
 [1] Aggregate Measurement via Oblivious Shuffling. Erik Anderson, Melissa Chase, F. Betul Durak, Esha Ghosh, Kim Laine, Chenkai Weng. [https://eprint.iacr.org/2021/1490](https://eprint.iacr.org/2021/1490).
