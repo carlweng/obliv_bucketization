@@ -18,7 +18,7 @@ at the us-west region and one of them is located at us-east region. The round-tr
 | key size (bits) | #keys | domain size | threshold | running time (seconds) |
 | --------------- | ----- | ----------- | --------- | ---------------------- |
 | 32  | 1000000 | 1048576 | 200 | 9.89   |
-| 128 | 1000000 | 1048476 | 500 | 352.14 |
+| 128 | 1000000 | 1048576 | 500 | 352.14 |
 
 ## References
 [1] Aggregate Measurement via Oblivious Shuffling. Erik Anderson, Melissa Chase, F. Betul Durak, Esha Ghosh, Kim Laine, Chenkai Weng. [https://eprint.iacr.org/2021/1490](https://eprint.iacr.org/2021/1490).
