@@ -6,12 +6,19 @@ The data is drawn from Zipf distribution with the parameter 1.03 and domain size
 respectively.
 
 ## Benchmarks
-We test and report the performance of the bucketization protocol. The datasets above are used as the inputs. The output is a histogram
-aggregated by the keys. We consider the threshold parameter to prune the layered bucketization. The results achieve differential privacy.
-The experiments are done in three Microsoft Azure Standard D8s v4 machines each equipped with 8vCPU and 32GiB RAM. Two of them are located
+We test and report the performance of the bucketization protocol[1]. The datasets above are used as the inputs. The output is a histogram
+aggregated by the keys. We consider the threshold parameter to prune the layered bucketization.
+
+The results achieve (\epsilon,\delta)-differential privacy with \epsilon=1 and \delta=2^{-40}. Additionally, we set M=81 for 32-bit keys in
+2-layer bucketization and M=405 for 128-bit keys in 8-layer bucketization. The detailed analysis can be found at [1].
+
+The experiments are done in 3 Microsoft Azure Standard D8s v4 machines each equipped with 8vCPU and 32GiB RAM. Two of them are located
 at the us-west region and one of them is located at us-east region. The round-trip delay between the west and east is 64ms.
 
 | key size (bits) | #keys | domain size | threshold | running time (seconds) |
 | --------------- | ----- | ----------- | --------- | ---------------------- |
 | 32  | 1,000,000 | 1,048,576 | 200 | 9.89   |
 | 128 | 1,000,000 | 1,048,476 | 500 | 352.14 |
+
+## References
+[1] Aggregate Measurement via Oblivious Shuffling. Erik Anderson, Melissa Chase, F. Betul Durak, Esha Ghosh, Kim Laine, Chenkai Weng. [https://eprint.iacr.org/2021/1490](https://eprint.iacr.org/2021/1490).
